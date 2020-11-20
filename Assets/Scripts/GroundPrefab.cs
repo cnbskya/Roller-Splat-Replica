@@ -10,5 +10,7 @@ public class GroundPrefab : MonoBehaviour
     {
         GetComponent<MeshRenderer>().material.color = color;
         isColored = true;
+        
+        FindObjectOfType<GameManager>().CheckComplete();
     }
 }

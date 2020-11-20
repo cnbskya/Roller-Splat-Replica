@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class BallController : MonoBehaviour
 {
@@ -16,6 +18,13 @@ public class BallController : MonoBehaviour
     private Vector2 swipePosisitionCurrent;
     private Vector2 currentSwipe;
 
+    private Color changeColor;
+
+    private void Start()
+    {
+        changeColor = Color.HSVToRGB(UnityEngine.Random.Range(0f,1f), UnityEngine.Random.Range(0f,1f),UnityEngine.Random.Range(0f,1f));
+        GetComponent<MeshRenderer>().material.color = changeColor;
+    }
 
     private void FixedUpdate()
     {
@@ -23,6 +32,19 @@ public class BallController : MonoBehaviour
         if (isMoving)
         {
             rb.velocity = moveDirection * speed;
+        }
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position - (Vector3.up / 2), 0.05f);
+        int j = 0;
+        while (j < hitColliders.Length)
+        {
+            GroundPrefab ground = hitColliders[j].transform.GetComponent<GroundPrefab>();
+            if (ground && !ground.isColored)
+            {
+                ground.ChangeColor(changeColor);
+            }
+
+            j++;
         }
 
         // HEDEFE ULAŞIP ULAŞMADIĞIMIZIN KONTROLÜ

@@ -23,6 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Roller-Splat-Replica/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Roller-Splat-Replica/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GroundPrefab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GroundPrefab.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,20 +36,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa33144.25123/BallController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa8232.21739/GroundPiece.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/d2/9cd780fd/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GroundPrefab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Swipe Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwipeTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Swipe.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/BallController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GroundPrefab.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -94,7 +97,9 @@
       <workItem from="1605772435950" duration="9798000" />
       <workItem from="1605786569985" duration="602000" />
       <workItem from="1605792969072" duration="5688000" />
-      <workItem from="1605859629881" duration="3999000" />
+      <workItem from="1605859629881" duration="5346000" />
+      <workItem from="1605865482747" duration="126000" />
+      <workItem from="1605865625356" duration="7819000" />
     </task>
     <servers />
   </component>

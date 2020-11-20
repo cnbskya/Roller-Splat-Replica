@@ -1,24 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private GroundPrefab[] allGroundPrefabs;
-    void Start()
+    public GameObject[] prefabs;
+    private GroundPrefab[] allGroundPieces;
+
+    private void Awake()
     {
         instance = this;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        SetupNewLevel();
+        Instantiate(prefabs[2]);
+        allGroundPieces = FindObjectsOfType<GroundPrefab>();
     }
-
-    private void SetupNewLevel()
+    
+    public void CheckComplete()
     {
-        allGroundPrefabs = FindObjectsOfType<GroundPrefab>();
+        bool isFinished = true;
+
+        for (int i = 0; i < allGroundPieces.Length; i++)
+        {
+            if (allGroundPieces[i].isColored == false)
+            {
+                isFinished = false;
+                break;
+            }
+        }
     }
 }
