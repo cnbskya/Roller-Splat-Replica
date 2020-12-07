@@ -1,35 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Transform levelsParent;
     public static GameManager instance;
-    public GameObject[] prefabs;
-    private GroundPrefab[] allGroundPieces;
+    public GameObject currentlyActiveLevel;
+    public Text scoreText;
+    public int score = 1;
 
     private void Awake()
     {
         instance = this;
     }
+
     private void Start()
     {
-        Instantiate(prefabs[2]);
-        allGroundPieces = FindObjectsOfType<GroundPrefab>();
+        currentlyActiveLevel = GameObject.Find("Levels").transform.GetChild(0).gameObject;
+        currentlyActiveLevel.SetActive(true);
     }
     
-    public void CheckComplete()
+    public void ScoreIncrement()
     {
-        bool isFinished = true;
-
-        for (int i = 0; i < allGroundPieces.Length; i++)
-        {
-            if (allGroundPieces[i].isColored == false)
-            {
-                isFinished = false;
-                break;
-            }
-        }
+        score++;
+        scoreText.text = score.ToString();
     }
 }

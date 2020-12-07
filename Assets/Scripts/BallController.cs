@@ -22,7 +22,8 @@ public class BallController : MonoBehaviour
 
     private void Start()
     {
-        changeColor = Color.HSVToRGB(UnityEngine.Random.Range(0f,1f), UnityEngine.Random.Range(0f,1f),UnityEngine.Random.Range(0f,1f));
+        changeColor = Color.HSVToRGB(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f),
+            UnityEngine.Random.Range(0f, 1f));
         GetComponent<MeshRenderer>().material.color = changeColor;
     }
 
@@ -50,7 +51,7 @@ public class BallController : MonoBehaviour
         // HEDEFE ULAŞIP ULAŞMADIĞIMIZIN KONTROLÜ
         if (nextCollisionPosition != Vector3.zero)
         {
-            if (Vector3.Distance(transform.position, nextCollisionPosition) < 1)
+            if (Vector3.Distance(transform.position, nextCollisionPosition) < 0.5f)
             {
                 isMoving = false;
                 moveDirection = Vector3.zero;
@@ -103,14 +104,14 @@ public class BallController : MonoBehaviour
         }
     }
 
-    private void SetDestination(Vector3 direction)
+    private void SetDestination(Vector3 direction) // ÇARPIŞACAĞIMIZ YERİN TESPİTİ YAPILIYOR.
     {
         moveDirection = direction;
-
-        // ÇARPIŞACAĞIMIZ YERİN TESPİTİ YAPILIYOR. 
+         
         RaycastHit hit;
         if (Physics.Raycast(transform.position, direction, out hit, 100f))
         {
+            Debug.DrawLine(transform.position, hit.point, Color.red, 5f);
             nextCollisionPosition = hit.point;
         }
 

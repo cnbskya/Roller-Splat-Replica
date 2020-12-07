@@ -8,6 +8,7 @@
           <e p="BallController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GroundPrefab.cs" t="Include" />
+          <e p="LevelManagerLocal.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
